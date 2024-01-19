@@ -1,0 +1,134 @@
+  {% extends 'base.html' %}
+  {% load static %}
+  {% block content %}
+  <html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+ .btn {
+  border: 1px solid blue;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+.btn-left{
+  border-left:2px solid blue;
+}
+.btn-right{
+  border-right:2px solid blue;
+}
+.btn-down{
+  border-bottom:2px solid blue;
+}
+.btn-radius-down-right
+{
+  border-bottom-right-radius: 0;
+}
+.btn-radius-down-left
+{
+  border-bottom-left-radius: 0;
+}
+.btn-radius-top-right
+{
+  border-top-right-radius: 0;
+}
+.btn-radius-top-left{
+  border-top-left-radius: 0;
+}
+</style>    
+</head>
+    <body>
+      <div id="indexbody">
+      <div class="container-fluid">
+        <div class="container font">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                  </ol>
+          
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" style="height: 300px; " >
+          
+                    <div class="item active">
+                      <img src="{% static 'Untitled-1.jpg' %}" alt="Los Angeles" style="width:100%;height: 100%;">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+          
+                    <div class="item">
+                      <img src="{% static 'Untitled-2.jpg' %}" alt="Chicago" style="width:100%;height: 100%;">
+                        <div class="carousel-caption">
+                      </div>
+                    </div>
+              
+                
+                </div>
+          
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              </div>
+              <div class="row">
+                <hr>
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="height: 40px;">
+                  <div class="">
+                    <div class="btn-group btn-group-justified">
+                      <a href="#" class="btn btn-default btn-left btn-radius-down-left">کادویی</a>
+                      <a href="#" class="btn btn-default">شمع</a>
+                      <a href="#" class="btn btn-default">بادکنک</a>
+                      <a href="#" class="btn btn-default btn-right btn-radius-down-right">کلاه و تاج</a>
+                    </div>
+                  
+                      <div class="btn-group btn-group-justified">
+                      <a href="#" class="btn btn-default btn-down btn-left btn-radius-top-left">پیشنهاد ویژه</a>
+                      <a href="#" class="btn btn-default btn-down">آتش بازی</a>
+                      <a href="#" class="btn btn-default btn-down">تم تولد</a>
+                      <a href="#" class="btn btn-default btn-down btn-right btn-radius-top-right">جانبی تولد</a>
+                    </div>
+                    
+                   
+                  </div>
+                  
+                </div>
+                </div>
+                
+                <div class="col-md-1"></div>
+              </div>
+            </div>
+            <div class="col-md-2" style="height: 20px;">
+
+            </div>
+            
+          </div>
+         
+        </div>
+         
+      </div>
+    </div>
+    </body>
+</html>   
+{% endblock content %}

@@ -1,0 +1,1 @@
+from tavallodeno.wsgi import application

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<a href="{% url 'home' %}"><img src="{% static 'images/1.jpg' %}" id="pimage"></a>
+{% endblock content %}

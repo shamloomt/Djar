@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه اصلی</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'ahmadstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script src="{% static 'ahmadjs.js' %}"></script>
+  <script src="{% static 'ahmadajax.js' %}"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    #basebody{
+    background-image: url('{% static "back.jpg" %}');
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+  </style>
+</head>
+<body id="basebody" >
+  <div id="basediv2">
+    {% for p in Category %}
+            {% if p.id == 2 %}
+            <a href="{{p.id}}"><img src="{% static 'atash.png' %}" style ="height:110px;"></a><br><br>
+            {% endif %}
+            {% if p.id == 26 %}
+            <a href="{{p.id}}"><img src="{% static 'tem.png' %}" style ="height:110px;"></a><br><br><br>
+            {% endif %}
+            {% if p.id == 4 %}
+            <a href="{{p.id}}"><img src="{% static 'badkonak.png' %}" style ="height:110px;"></a><br><br><br>
+            {% endif %}
+            {% if p.id == 24 %}
+            <a href="{{p.id}}"><img src="{% static 'kolah.png' %}" style ="height:110px;"></a><br><br>
+            {% endif %}
+        {% endfor %}
+    </div>
+        <div id="basediv3" >
+            {% for p in Category %}
+            {% if p.id == 60 %}
+            <a href="{{p.id}}"><img src="{% static 'pishnahad.png' %}" style ="height:110px;"></a><br><br>
+            {% endif %}
+            {% if p.id == 8 %}
+            <a href="{{p.id}}"><img src="{% static 'kadoei.png' %}" style ="height:110px;"></a><br><br><br>
+            {% endif %}
+            {% if p.id == 59 %}
+            <a href="{{p.id}}"><img src="{% static 'janebi.png' %}" style ="height:110px;"></a><br><br><br>
+            {% endif %}
+            {% if p.id == 19 %}
+            <a href="{{p.id}}"><img src="{% static 'shame.png' %}" style ="height:110px;"></a><br><br>
+            {% endif %}
+        {% endfor %}
+        </div>
+        
+      {% block content %}
+
+      {% endblock content %}
+</body>
+</html>
