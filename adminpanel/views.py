@@ -23,8 +23,21 @@ class GetAll_Categories(APIView):
     def get(self, request):
         query = Categories.objects.all()
         serializer = getcat_Serializer(query, many = True, context = {'request' : request})
+        cat_res = []
+        c = 0
+        for i in query:
+            cat_res.append(
+                {
+                    'id' : (query.values('id')[c])['id'],
+                    'name' : (query.values('name')[c])['name'],
+                    'parent' : (query.values('parent')[c])['parent'],
+                    "pic_cat": "http://37.152.189.137:10543/" + (query.values('pic_cat')[c])['pic_cat']
+                }
+            )
+            c += 1
 
-        return Response(serializer.data, status = status.HTTP_200_OK)
+        # return Response(serializer.data, status = status.HTTP_200_OK)
+        return Response(cat_res)
 
 class get_product_with_cat(APIView):
     def get(self, request, catID):
